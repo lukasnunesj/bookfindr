@@ -8,10 +8,10 @@
             </div>
             <div class="row">
                 <div class="col text-center">
-                    <a href="#" class="footer-link" target="_blank">
+                    <a href="https://github.com/lukasnunesj" class="footer-link" target="_blank">
                         <github-icon size="1.5x" class="mx-2"></github-icon>
                     </a>
-                    <a href="#" class="footer-link" target="_blank">
+                    <a href="https://www.linkedin.com/in/lucasnunesjoaquim/" class="footer-link" target="_blank">
                         <linkedin-icon size="1.5x"></linkedin-icon>
                     </a>
                 </div>
