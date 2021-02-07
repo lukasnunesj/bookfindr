@@ -1,4 +1,4 @@
-# bookfindr
+# Bookfindr
 
 ## Project setup
 ```
