@@ -12,7 +12,7 @@
                 I make this project using <b>VueJs</b> because I want to practice my knowledge in this framework that I like very much!
             </p>
             <p>
-                I chose to use Bootstrap because I didn't want to worry about CSS in this specific project. I wanted to keep it simple so I focused mostly on Vue aspects.
+                I chose to use Bootstrap because I didn't want to worry about CSS in this specific project. Furthermore, I wanted to keep it simple, so I focused mostly on Vue aspects.
             </p>
             <p>
                 <i>Vue Router</i> was used to implement navigation between pages.
