@@ -1,10 +1,10 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <NavbarBrand target="navbarNavAltMarkup" link="#" text="Bookfindr" />
+            <NavbarBrand target="navbarNavAltMarkup" link="/" text="Bookfindr" />
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <NavbarNav>
-                    <NavLink link="#" text="about"/>
+                    <NavLink link="/about" text="about"/>
                 </NavbarNav>
             </div>
         </div>
