@@ -6,10 +6,10 @@
             <br>
             <br>
             <p>
-                This site is very simple, you type some terms and click to search. It will call Google Books' API using Axios to retrieve data which match with the terms searched.
+                This site is very simple, you type some terms and click "search". It will call Google Books' API using Axios to retrieve data which match with the terms searched.
             </p>
             <p>
-                I make this project using <b>VueJs</b> because I want to practice my knowledge in this framework that I like very much!
+                I made this project using <b>VueJs</b> because I want to practice my knowledge in this framework that I like very much!
             </p>
             <p>
                 I chose to use Bootstrap because I didn't want to worry about CSS in this specific project. Furthermore, I wanted to keep it simple, so I focused mostly on Vue aspects.
