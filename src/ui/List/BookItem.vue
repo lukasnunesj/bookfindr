@@ -9,10 +9,10 @@
                 {{ title }}
             </h5>
             <p>
-                <small>{{ author }}</small>
+                <small>{{ authorsString }}</small>
             </p>
             <p>
-                <small>{{ publishedDate }}</small>
+                <small>{{ publishedDateYear }}</small>
             </p>
         </div>
         <div class="image-parent">
@@ -30,7 +30,7 @@ export default {
     props: {
         title: String,
         link: String,
-        author: String,
+        authors: Array,
         imgUrl: Object,
         publishedDate: String,
     },
@@ -38,6 +38,26 @@ export default {
         return {
             noimage: '../../assets/img/noimg.jpeg',
         };
+    },
+    computed:{
+        authorsString(){
+            if (!this.authors) {
+                return 'by unknown';
+            }
+            this.authors.forEach((element, index) => {
+                this.authors[index] = element
+                    .toLowerCase()
+                    .replace(/\b\w/g, (l) => l.toUpperCase());
+            });
+            return 'by ' + this.authors.join(', ');
+        },
+        publishedDateYear(){
+            if (!this.publishedDate) {
+                return 'unknown publishing year';
+            }
+            const [year] = this.publishedDate.split('-');
+            return 'published at ' + year;
+        }
     },
 };
 </script>

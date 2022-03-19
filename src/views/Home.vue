@@ -13,15 +13,11 @@
                         <BookItem
                             v-for="book in bookList"
                             :key="book.id"
-                            :author="
-                                book.volumeInfo.authors | authorsArrayToString
-                            "
+                            :authors="book.volumeInfo.authors"
                             :title="book.volumeInfo.title"
                             :img-url="book.volumeInfo.imageLinks"
                             :link="book.volumeInfo.infoLink"
-                            :published-date="
-                                book.volumeInfo.publishedDate | getDate
-                            "
+                            :published-date="book.volumeInfo.publishedDate"
                         />
                     </UnorderedList>
                 </div>
@@ -38,27 +34,6 @@ import axios from 'axios';
 export default {
     name: 'HomeComponent',
     components: { Searchbox, UnorderedList, BookItem },
-    filters: {
-        authorsArrayToString: function (authorsArray) {
-            console.log(authorsArray);
-            if (!authorsArray) {
-                return 'by unknown';
-            }
-            authorsArray.forEach((element, index) => {
-                authorsArray[index] = element
-                    .toLowerCase()
-                    .replace(/\b\w/g, (l) => l.toUpperCase());
-            });
-            return 'by ' + authorsArray.join(', ');
-        },
-        getDate: function (dateString) {
-            if (!dateString) {
-                return 'unknown publishing year';
-            }
-            const [year] = dateString.split('-');
-            return 'published at ' + year;
-        },
-    },
     data: function () {
         return { bookList: [] };
     },
