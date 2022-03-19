@@ -1,20 +1,25 @@
 # Bookfindr
 
 ## Project setup
+
 ```
 yarn install
 ```
 
 ### Compiles and hot-reloads for development
+
 ```
 yarn serve
 ```
 
 ### Compiles and minifies for production
+
 ```
 yarn build
 ```
+
 ### About
+
 <br>
 <p>
     This site is very simple, you type some terms and click to search. It will call Google Books' API using Axios to retrieve data wich matches with the terms searched.

@@ -5,10 +5,9 @@
 </template>
 
 <script>
-    export default {
-        name: "UnorderedList"
-    };
+export default {
+    name: 'UnorderedList',
+};
 </script>
 
-<style>
-</style>
+<style></style>
