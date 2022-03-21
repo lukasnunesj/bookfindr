@@ -4,25 +4,27 @@ import { makeServer } from '../../miragejs/server';
 
 const mountBookItem = (override) => {
     const book = server.create('book', {
-        title: 'Livro 1',
-        authors: ['Author 1', 'Author 2'],
-        publishedDate: '2020-02-02',
-        imageLinks: {
-            smallThumbnail: "http://books.google.com/books/content?id=H0taAAAAYAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-            thumbnail: "http://books.google.com/books/content?id=H0taAAAAYAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-        },
-        infoLink: "http://books.google.com.br/books?id=H0taAAAAYAAJ&dq=a&hl=&source=gbs_api",
+        volumeInfo:{
+            title: 'Livro 1',
+            authors: ['Author 1', 'Author 2'],
+            publishedDate: '2020-02-02',
+            imageLinks: {
+                smallThumbnail: "http://books.google.com/books/content?id=H0taAAAAYAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+                thumbnail: "http://books.google.com/books/content?id=H0taAAAAYAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+            },
+            infoLink: "http://books.google.com.br/books?id=H0taAAAAYAAJ&dq=a&hl=&source=gbs_api",
         ...override
+        }
     });
     
     return {
         wrapper: mount(BookItem, {
             propsData: {
-                title: book.title,
-                authors: book.authors,
-                publishedDate: book.publishedDate,
-                imgUrl: book.imageLinks,
-                link: book.infoLink
+                title: book.volumeInfo.title,
+                authors: book.volumeInfo.authors,
+                publishedDate: book.volumeInfo.publishedDate,
+                imgUrl: book.volumeInfo.imageLinks,
+                link: book.volumeInfo.infoLink
             }
         }),
         book

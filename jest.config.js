@@ -12,9 +12,9 @@ module.exports = {
     collectCoverage: false,
     collectCoverageFrom: [
         '<rootDir>/src/components/**/*.{js,vue}',
-        '<rootDir>/src/router/**/*.{js,vue}',
         '<rootDir>/src/ui/**/*.{js,vue}',
         '<rootDir>/src/views/**/*.{js,vue}',
+        '!<rootDir>/src/router/**/*.{js,vue}',
         '!**/node_modules/**',
     ],
     testEnvironment: 'jsdom',

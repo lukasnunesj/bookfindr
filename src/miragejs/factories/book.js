@@ -30,24 +30,26 @@ const images = [
 
 export default {
     book: Factory.extend({
-        title() {
-            return faker.fake('{{lorem.words}}');
-        },
-        authors() {
-            return Array.from({length: 2}, () => faker.fake('{{name.findName}}'));
-        },
-        publishedDate() {
-            return moment(new Date(faker.fake('{{date.past(10)}}'))).format('yyyy-MM-DD');
-        },
-        imageLinks() {
-            let imgURL = faker.random.arrayElement(images);
-            return {
-                smallThumbnail: imgURL,
-                thumbnail: imgURL
-            };
-        },
-        infoLink(){
-            return faker.fake('{{internet.url}}');
+        volumeInfo: {
+            title() {
+                return faker.fake('{{lorem.words}}');
+            },
+            authors() {
+                return Array.from({length: 2}, () => faker.fake('{{name.findName}}'));
+            },
+            publishedDate() {
+                return moment(new Date(faker.fake('{{date.past(10)}}'))).format('yyyy-MM-DD');
+            },
+            imageLinks() {
+                let imgURL = faker.random.arrayElement(images);
+                return {
+                    smallThumbnail: imgURL,
+                    thumbnail: imgURL
+                };
+            },
+            infoLink(){
+                return faker.fake('{{internet.url}}');
+            }
         }
     }),
 };
