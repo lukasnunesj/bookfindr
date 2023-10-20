@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main data-test-id="home-page">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -18,6 +18,7 @@
                             :img-url="book.volumeInfo.imageLinks"
                             :link="book.volumeInfo.infoLink"
                             :published-date="book.volumeInfo.publishedDate"
+                            data-test-id="bookitem"
                         />
                     </UnorderedList>
                 </div>

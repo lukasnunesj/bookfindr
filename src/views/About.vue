@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" data-test-id="about-page">
         <div class="row justify-content-center">
             <div class="col-8 mt-5">
                 <h3 class="text-center">About</h3>

@@ -5,11 +5,12 @@
                 target="navbarNavAltMarkup"
                 link="/"
                 text="Bookfindr"
+                data-test-id="home-navlink"
             />
 
             <div id="navbarNavAltMarkup" class="collapse navbar-collapse">
                 <NavbarNav>
-                    <NavLink link="/about" text="about" />
+                    <NavLink link="/about" text="about" data-test-id="about-navlink" />
                 </NavbarNav>
             </div>
         </div>

@@ -3,6 +3,7 @@
         <button
             class="navbar-toggler"
             type="button"
+            data-test-id="brand-logo"
             data-bs-toggle="collapse"
             :data-bs-target="'#' + target"
             :aria-controls="target"

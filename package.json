@@ -10,7 +10,12 @@
         "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
         "test": "jest",
         "test:watch": "jest --watchAll",
-        "test:coverage": "jest --coverage"
+        "test:coverage": "jest --coverage",
+        "cypress:open": "cypress open",
+        "cypress:run": "cypress run",
+        "test:e2e": "start-server-and-test serve 8080 cypress:open",
+        "test:e2e:headless": "start-server-and-test serve 8080 cypress:run"
+
     },
     "dependencies": {
         "axios": "^0.21.1",
@@ -35,6 +40,7 @@
         "babel-core": "^7.0.0-bridge.0",
         "babel-eslint": "^10.1.0",
         "babel-jest": "^27.5.1",
+        "cypress": "^9.5.2",
         "eslint": "^6.8.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-vue": "^6.2.2",
@@ -43,6 +49,7 @@
         "jsdom-global": "^3.0.2",
         "miragejs": "^0.1.43",
         "prettier": "^2.6.0",
+        "start-server-and-test": "^1.14.0",
         "vue-jest": "^3.0.7",
         "vue-template-compiler": "^2.6.11"
     },
